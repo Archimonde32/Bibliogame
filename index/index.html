@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <header>
+    <div class="navbar">
+      <a href="../inscription/inscription.html">INSCRIPTION</a>
+      <button class="open-button" onclick="openForm()">Connexion</button>
+
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Connecte-Toi</h1>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Mot de passe</b></label>
+          <input type="password" placeholder="Mot de passe" name="psw" required>
+
+          <button type="submit" class="btn">Connexion</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Fermé</button>
+        </form>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">CATEGORIE CONSOLE
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2>CONSOLE</h2>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3>Playstation</h3>
+              <a href="#">PS1</a>
+              <a href="#">PS2</a>
+              <a href="#">PS3</a>
+              <a href="#">PS4</a>
+              <a href="#">PS5</a>
+              <a href="#">PSP</a>
+              <a href="#">PSPVITA</a>
+            </div>
+            <div class="column">
+              <h3>Nintendo</h3>
+              <a href="#">Super Game boy</a>
+              <a href="#">Game Cube</a>
+              <a href="#">Nintendo DS</a>
+              <a href="#">WII</a>
+              <a href="#">Nintendo 3DS</a>
+              <a href="#">WII U</a>
+              <a href="#">Switch</a>
+            </div>
+            <div class="column">
+              <h3>X-Box</h3>
+              <a href="#">X-Box</a>
+              <a href="#">X-Box 360</a>
+              <a href="#">X-Box One</a>
+              <a href="#">X-Box One S</a>
+              <a href="#">X-Box Serie S</a>
+              <a href="#">X-Box Serie X</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#home"><img src="../image/Logo.png" width="100px" height="50px" alt="logo"></a>
+      <div class="dropdown">
+        <button class="dropbtn">CATEGORIE JEUX
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2>JEUX</h2>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3>GENRE</h3>
+              <a href="#">MMORPG</a>
+              <a href="#">RPG</a>
+              <a href="#">FPS</a>
+              <a href="#">RTS</a>
+              <a href="#">ACTION/AVENTURE</a>
+              <a href="#">HORREUR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">CATEGORIE SET-UP
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <div class="header">
+            <h2>SET-UP</h2>
+          </div>
+          <div class="row">
+            <div class="column">
+              <h3>TYPE</h3>
+              <a href="#">PC Portable</a>
+              <a href="#">PC Fixe</a>
+              <a href="#">Ecran</a>
+              <a href="#">Périphérique</a>
+              <a href="#">Streaming</a>
+              <a href="#">Fauteuil</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section>
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+      <section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </section>
+
+
+      <!-- <div class="search-box">
+      <input type="text" name="" class="search-txt" placeholder="Tapez pour rechercher" />
+      <a class="search-btn" href="#">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </a>
+    </div>
+     -->
+  </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>
