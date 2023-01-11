@@ -51,7 +51,7 @@ h2 span {
   vertical-align: middle;
 }
 body {
-  background-image: url(image/fondaccueil.jpg);
+  background-image: url(../image/fondaccueil.jpg);
   font-family: 'Alegreya Sans';
 }
 .wrapper {
@@ -75,7 +75,7 @@ h2 span {
 }
 h2:after {
   content: '';
-  z-index: 1;
+  z-index: -1;
   bottom: 50%;
   margin-bottom: -2px;
   height: 2px;
