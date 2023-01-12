@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accueil</title>
+  <title>PageJeux</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../index.css">
-  <link rel="stylesheet" href="./test.css">
-  <link rel="stylesheet" href="../profil.css" />
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./profil.css" />
+  <link rel="stylesheet" href="./exemplepjeu.css">
 </head>
 <div class="action">
   <div class="profile" onclick="menuToggle();">
@@ -144,97 +144,48 @@
       </div>
       <a href="">E-SPORT</a>
     </div>
-
   </header>
   <section>
-    <div class="wrapper">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="./image/gta5.jpg" alt="Avatar" style="width:1000px;height:600px;">
+        </div>
+        <div class="flip-card-back">
+          <h1 style="font-size:50px;" >Grand Theft Auto 5</h1>
+          <p style="font-size:20px;">La récréation de la ville de Los Angeles de GTA : San Andreas est
+            protagoniste de nouveau sur GTA 5 - Grand Theft Auto, un jeu où
+            ses trois personnages (un escroc, un braqueur de banques et un
+            psychopathe) se mêlent au crime le plus bas, avec des
+            fonctionnaires corrompus du gouvernement des États-Unis et
+            l’industrie du spectacle. À partir de là, vous connaissez
+            l’histoire : de la violence et un monde énorme à explorer à la
+            recherche de nouvelles missions.</p>
+          <div class="showcase">
+            <div class="rating-system3">
+              <input type="radio" name='rate3' id="star5_3" />
+              <label for="star5_3"></label>
 
-      <h2><strong>Dernier Rajouts<span></span></strong></h2>
+              <input type="radio" name='rate3' id="star4_3" />
+              <label for="star4_3"></label>
 
-      <div class="cards">
+              <input type="radio" name='rate3' id="star3_3" />
+              <label for="star3_3"></label>
 
-        <figure class="card">
+              <input type="radio" name='rate3' id="star2_3" />
+              <label for="star2_3"></label>
 
-          <img src="../image/pokemon_ecarlate_3211.jpg" />
+              <input type="radio" name='rate3' id="star1_3" />
+              <label for="star1_3"></label>
 
-          <figcaption>Pokemon Ecarlate</figcaption>
-
-        </figure>
-
-        <figure class="card">
-
-          <img src="../image/mile morales.jpg" />
-
-          <figcaption>Spiderman Miles Morales </figcaption>
-
-        </figure>
-
-        <figure class="card">
-
-          <a href="../pagejeux.html"><img src="../image/grand-theft-auto-v-ps5.jpg" /></a>
-
-          <figcaption>GTA 5 ps5</figcaption>
-
-        </figure>
-
-        <figure class="card">
-
-          <img src="../image/the-callisto-protocol-jaq-6305ced74ec20.jpg" />
-
-          <figcaption>The Callisto Protocol</figcaption>
-
-        </figure>
-
+              <div class="text"></div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <h2><strong>Les News</strong></h2>
-
-      <div class="news">
-
-        <figure class="article">
-
-          <img src="../image/Forspokforspoken.jpg" />
-
-          <figcaption>
-
-            <h3>New Jeux</h3>
-
-            <p>
-
-              Forspoken:Les joueurs déjà mécontents devant ce choix controversé !
-              Prévu le 24 janvier prochain, Forspoken vient de s’ajouter un poids de taille : sur PC, c’est Denuvo qui
-              assure la protection du jeu contre le piratage ! Un logiciel accusé d’impacter les performances.
-
-            </p>
-
-          </figcaption>
-
-        </figure>
-
-        <figure class="article">
-
-          <img src="../image/thelastofus.jpg" />
-
-          <figcaption>
-
-            <h3>New culture</h3>
-
-            <p>
-
-              Série The Last of Us : une mauvaise nouvelle pour les fans français.
-              La série The Last of Us risque d’être le gros carton de ce début d’année. Attendue pour ce dimanche aux
-              États-Unis, la France pourrait bien être privée de cette adaptation faute de diffuseur.
-
-            </p>
-
-          </figcaption>
-
-        </figure>
-
-      </div>
-
-    </div>
   </section>
+
+
   <footer>
     <div class="footer">
       <div id="button"></div>
@@ -246,7 +197,7 @@
               <li> <a href="#"> <i class=" fa fa-facebook"> </i> </a> </li>
               <li> <a href="#"> <i class="fa fa-twitter"> </i> </a> </li>
               <li> <a href="#"> <i class="fa fa-google-plus"> </i> </a> </li>
-              <li> <a href="../contact/contact.html"><i class="fa fa-commenting"></i> </a> </li>
+              <li> <a href="../contact.html"><i class="fa fa-commenting"></i> </a> </li>
               <li> <a href="#"> <i class="fa fa-question" style="font-size:24px"> </i> </a> </li>
             </ul>
           </div>
@@ -284,11 +235,11 @@
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
-      function menuToggle() {
-        const toggleMenu = document.querySelector(".menu");
-        toggleMenu.classList.toggle("active");
-      }
-    </script>
+    function menuToggle() {
+      const toggleMenu = document.querySelector(".menu");
+      toggleMenu.classList.toggle("active");
+    }
+  </script
 </body>
 
 </html>

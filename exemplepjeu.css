@@ -1,0 +1,166 @@
+.flip-card {
+    background-color: transparent;
+    width: 1000px;
+    height: 600px;
+    border: 0px solid #f1f1f1;
+    perspective: 1000px;
+    /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: rgb(34, 37, 40);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.showcase {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.rating-system3 {
+    width: auto;
+    display: inline-block;
+    margin: 20px;
+    position: relative;
+}
+
+span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: red;
+    position: absolute;
+    left: 20px;
+}
+
+input {
+    display: none;
+}
+
+label {
+    float: right;
+    display: inline-block;
+    width: 20px;
+    height: 5px;
+    background: #ccc;
+    margin: 4px;
+    position: relative;
+    transition: all .3s;
+}
+
+.text {
+    color: #ccc;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+}
+
+.rating-system3 label {
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+}
+
+.rating-system3 label:hover,
+.rating-system3 label:hover~label {
+    background: crimson;
+    border-radius: 100%
+}
+
+.rating-system3 input:checked~label {
+    border-radius: 100%;
+    background: crimson;
+    box-shadow: 6px 0 crimson, 3px 1px 0 7px #222, 3px 1px 0 9px crimson;
+
+}
+
+.rating-system3 input:checked~label:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: crimson;
+    transform: rotate(-45deg);
+    border-bottom-left-radius: 15%;
+    top: 30%;
+    left: 3px;
+}
+
+input:nth-of-type(5):checked~.text:before {
+    content: "Bof";
+}
+
+label:nth-of-type(5):hover~.text:before {
+    content: "Bof" !important;
+}
+
+input:nth-of-type(4):checked~.text:before {
+    content: "Pas Mal";
+}
+
+label:nth-of-type(4):hover~.text:before {
+    content: "Pas Mal" !important;
+}
+
+
+input:nth-of-type(3):checked~.text:before {
+    content: "Bien!";
+}
+
+label:nth-of-type(3):hover~.text:before {
+    content: "Bien!" !important;
+}
+
+
+input:nth-of-type(2):checked~.text:before {
+    content: "Super!";
+}
+
+label:nth-of-type(2):hover~.text:before {
+    content: "Super!" !important;
+}
+
+input:nth-of-type(1):checked~.text:before {
+    content: "Fabuleux!!";
+}
+
+label:nth-of-type(1):hover~.text:before {
+    content: "Fabuleux!!" !important;
+}
