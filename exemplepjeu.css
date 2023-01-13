@@ -46,121 +46,103 @@
     transform: rotateY(180deg);
 }
 
-.showcase {
-    position: absolute;
-    top: 32%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.rating-system3 {
-    width: auto;
-    display: inline-block;
-    margin: 20px;
+/* rank_debut */
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
     position: relative;
+    right: -37%;
 }
 
-span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: red;
+.rate:not(:checked)>input {
     position: absolute;
-    left: 20px;
+    top: -9999px;
 }
 
-input {
-    display: none;
-}
-
-label {
+.rate:not(:checked)>label {
     float: right;
-    display: inline-block;
-    width: 20px;
-    height: 5px;
-    background: #ccc;
-    margin: 4px;
-    position: relative;
-    transition: all .3s;
-}
-
-.text {
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 50px;
     color: #ccc;
-    padding: 10px 0;
-    position: absolute;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.rate:not(:checked)>label:hover,
+.rate:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.rate>input:checked+label:hover,
+.rate>input:checked+label:hover~label,
+.rate>input:checked~label:hover,
+.rate>input:checked~label:hover~label,
+.rate>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
+/* rank_fin */
+#chatbox {
+    position: relative;
+    left: 485px;
+    bottom: 500px;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 0 20px;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
     width: 100%;
-    top: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
 }
 
-.rating-system3 label {
-    width: 10px;
-    height: 10px;
-    margin: 0 10px;
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
 }
 
-.rating-system3 label:hover,
-.rating-system3 label:hover~label {
-    background: crimson;
-    border-radius: 100%
+.time-right {
+    float: right;
+    color: #aaa;
 }
 
-.rating-system3 input:checked~label {
-    border-radius: 100%;
-    background: crimson;
-    box-shadow: 6px 0 crimson, 3px 1px 0 7px #222, 3px 1px 0 9px crimson;
-
-}
-
-.rating-system3 input:checked~label:after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: crimson;
-    transform: rotate(-45deg);
-    border-bottom-left-radius: 15%;
-    top: 30%;
-    left: 3px;
-}
-
-input:nth-of-type(5):checked~.text:before {
-    content: "Bof";
-}
-
-label:nth-of-type(5):hover~.text:before {
-    content: "Bof" !important;
-}
-
-input:nth-of-type(4):checked~.text:before {
-    content: "Pas Mal";
-}
-
-label:nth-of-type(4):hover~.text:before {
-    content: "Pas Mal" !important;
-}
-
-
-input:nth-of-type(3):checked~.text:before {
-    content: "Bien!";
-}
-
-label:nth-of-type(3):hover~.text:before {
-    content: "Bien!" !important;
-}
-
-
-input:nth-of-type(2):checked~.text:before {
-    content: "Super!";
-}
-
-label:nth-of-type(2):hover~.text:before {
-    content: "Super!" !important;
-}
-
-input:nth-of-type(1):checked~.text:before {
-    content: "Fabuleux!!";
-}
-
-label:nth-of-type(1):hover~.text:before {
-    content: "Fabuleux!!" !important;
+.time-left {
+    float: left;
+    color: #999;
 }
